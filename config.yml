@@ -10,10 +10,14 @@ params:
   socialIcons:
     - name: github
       url: https://github.com/iagosaito
+    - name: spotify
+      url: https://open.spotify.com/user/iagosaito?si=bd12e50a5615400d
+    - name: goodreads
+      url: https://www.goodreads.com/user/show/164680356-iago-saito
 
   ShowReadingTime: true
   ShowShareButtons: true
-  ShowPostNavLinks: true
+  ShowPostNavLinks: false
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: false
   ShowWordCount: true
