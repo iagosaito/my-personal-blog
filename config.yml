@@ -42,7 +42,7 @@ menu:
       name: Tags
       url: /tags/
       weight: 20
-    # - identifier: archive
-    #   name: Archive
-    #   url: /archive/
-    #   weight: 30
+    - identifier: archive
+      name: Archive
+      url: /archives/
+      weight: 30
