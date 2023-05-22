@@ -1,7 +1,7 @@
 ---
 title: "Algoritmos: Busca Binária"
 date: 2023-05-22T13:47:39-03:00
-draft: true
+draft: false
 tags: [algorithms, search_algorithms]
 categories: [Algorithms]
 ---
