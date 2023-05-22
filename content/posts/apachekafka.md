@@ -1,7 +1,7 @@
 ---
 title: "Apache Kafka - O Básico"
 date: 2023-05-21T13:27:19-03:00
-draft: true
+draft: false
 tags: [kafka, distributed systems]
 ---
 
