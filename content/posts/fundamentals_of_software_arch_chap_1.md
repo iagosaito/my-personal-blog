@@ -75,3 +75,28 @@ Por exemplo, o arquiteto pode definir que numa arquitetura de camadas, a camada 
 Orientações fornecidas ao time de desenvolvimento, por exemplo, utilização de comunicação assíncrona entre serviços. Esse tipo de orientação vai guiar o desenvolvedor a escolher a tecnologia mais adequada para aquele fim. 
 
 A diferença entre o 3 (decisões arquiteturais) para o 4 (princípios de design) está basicamente na rigidez. Os princípios servem como guidelines, enquanto as decisões arquiteturais fornecem restrições que devem ser obedecidas ao máximo.  
+
+### Definição da função de um Software Architect
+
+Nessa parte do capítulo o autor argumenta que definir o que faz um *Software Archtect* também é difícil de definir, visto que a função pode variar de empresa para empresa. Por essa razão, o autor preferer focar nas __expectativas__ da função, citando oito como principais. 
+
+Ele explica cada uma dessas funções detalhadamente, para que não fique muito longo, vou tentar sintetizar os pontos chave. 
+
+- 1. Make architecture decisions.
+
+> O arquiteto deve definir as decisões de arquitetura e os design principles usado para guiar as escolhas de tecnologia do time, portanto, __ele deve guiar em vez de definir__. 
+
+Por exemplo, de acordo com o autor, ele deve guiar o time a usar um framework frontend reativo para desenvolvimento WEB em vez de definir que eles devem construir a aplicação utilizando React.js.
+
+- 2. Continually analyze the architecture.
+
+> O arquiteto deve, continuamente, analisar a arquitetura das aplicações e propor soluções para melhora e vitalidade das aplicações. 
+
+Ele deve se perguntar: A arquitetura feita quatro anos atrás ainda é viável ou demonstra sinais de decadência? As características arquiteturais (illities) continuam sendo atingidas?
+
+- 3. Keep current with latest trends.
+- 4. Ensure compliance with decisions.
+- 5. Diverse exposure and experience
+- 6. Have business domain knowledge.
+- 7. Possess interpersonal skills. 
+- 8. Understant and navigate politics
