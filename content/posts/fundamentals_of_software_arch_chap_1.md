@@ -82,21 +82,46 @@ Nessa parte do capítulo o autor argumenta que definir o que faz um *Software Ar
 
 Ele explica cada uma dessas funções detalhadamente, para que não fique muito longo, vou tentar sintetizar os pontos chave. 
 
-- 1. Make architecture decisions.
+- 1. *Make architecture decisions.*
 
 > O arquiteto deve definir as decisões de arquitetura e os design principles usado para guiar as escolhas de tecnologia do time, portanto, __ele deve guiar em vez de definir__. 
 
 Por exemplo, de acordo com o autor, ele deve guiar o time a usar um framework frontend reativo para desenvolvimento WEB em vez de definir que eles devem construir a aplicação utilizando React.js.
 
-- 2. Continually analyze the architecture.
+- 2. *Continually analyze the architecture.*
 
 > O arquiteto deve, continuamente, analisar a arquitetura das aplicações e propor soluções para melhora e vitalidade das aplicações. 
 
 Ele deve se perguntar: A arquitetura feita quatro anos atrás ainda é viável ou demonstra sinais de decadência? As características arquiteturais (illities) continuam sendo atingidas?
 
-- 3. Keep current with latest trends.
-- 4. Ensure compliance with decisions.
-- 5. Diverse exposure and experience
-- 6. Have business domain knowledge.
-- 7. Possess interpersonal skills. 
-- 8. Understant and navigate politics
+- 3. *Keep current with latest trends.*
+
+> O arquiteto deve se manter atualizando com as novas tecnologias e novas tendências da industria. 
+
+- 4. *Ensure compliance with decisions.*
+
+> O arquiteto deve verificar continuamente se o time de desenvolvimento está seguindo as decisões arquiteturais e os design principles que foram comunicados e documentados. 
+
+- 5. *Diverse exposure and experience.*
+
+> O arquiteto deve se expor a diferentes tecnologias, frameworks, plataformas e ambientes. 
+
+A ideia é que ele não seja um especialista em todas as tecnologias e linguagens, mas que ele tenha familiaridade com uma variedade de tecnologias. Por exemplo: é melhor que o arquiteto tenha conhecimento de 10 produtos diferentes de caching e saiba os prós e contras entre eles, do que ser especialista em apenas um. 
+
+- 6. *Have business domain knowledge.*
+
+> O arquiteto deve ter expertise no domínio de negócio. 
+
+Sem entender qual é o problema que a sua arquitetura deve resolver, é impossível criar uma arquitetura que consiga cumprir com as requisitos de negócio.
+
+- 7. *Possess interpersonal skills.* 
+
+> O arquiteto deve possuir habilidades interperssoais excepcionais, incluindo trabalho em equipe, ser um facilitador e liderança. 
+
+O autor cita que pelo menos 50% do trabalho de um arquiteto de software envolve habilidades relacionadas a liderença.
+
+- 8. *Understant and navigate politics*
+
+> O arquiteto deve entender o clima político da empresa e saber navegar entre eles.
+
+A ideia é que a maioria das mudanças arquiteturais vão impactar mais de um setor dentro da companhia. Sendo assim, o arquiteto sempre terá a sua decisão desafiada. Seja por P.O, gerentes ou desenvolvedores, o arquiteto deverá saber negociar de forma política e lutar para que as suas decisões sejam aprovadas. 
