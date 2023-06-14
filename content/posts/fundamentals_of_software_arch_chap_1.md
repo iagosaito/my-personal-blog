@@ -125,3 +125,16 @@ O autor cita que pelo menos 50% do trabalho de um arquiteto de software envolve 
 > O arquiteto deve entender o clima político da empresa e saber navegar entre eles.
 
 A ideia é que a maioria das mudanças arquiteturais vão impactar mais de um setor dentro da companhia. Sendo assim, o arquiteto sempre terá a sua decisão desafiada. Seja por P.O, gerentes ou desenvolvedores, o arquiteto deverá saber negociar de forma política e lutar para que as suas decisões sejam aprovadas. 
+
+### Práticas de engenharia de Software vs Processos
+
+Nas páginas seguintes, o autor se esforça para distinguir o conceito de *Processo vs Práticas de Engenharia*. 
+
+> De acordo com o autor, processo refere-se a como os times são formados e gerenciados, como as reuniões são conduzidas e o fluxo de trabalho na organização.
+
+> Por outro lado, Práticas de engenharia de Software são agnósticas a processos. Por exemplo, a utilização de CI é uma prática de engenharia que não depende de nenhum tipo particular de processo. 
+
+Ao longo dos últimos anos, várias práticas de engenharia de software foram adotadas por metodologias de desenvolvimento, como o XP (Extreme programming), por exemplo: automação, testes, SSOT e etc. Isso evidencia a diferença entre processo e engenharia.
+
+As práticas de engenharia são importantes e não devem ser desprezadas, porque elas estão intimamente relacionadas com a arquitetura da aplicação que está sendo desenvolvida. __Assim como existem diferentes arquiteturas para diferentes problemas, existem diferentes práticas de engenharia para diferentes problemas - a relação aqui é simbiótica.__ 
+
