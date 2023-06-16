@@ -1,7 +1,7 @@
 ---
 title: "Resumo/Análise do livro: Fundamentals of Software Architecture - Cap. 1"
 date: 2023-06-02T19:52:00-03:00
-draft: true
+draft: false
 tags: [fundamentals of software architecture, software architecture, book resume]
 categories: [Book Resume, Architecture]
 ---
@@ -28,7 +28,7 @@ Esse tipo de discussão é mencionada no prefácio, visto que, de acordo como o 
 
 > Em resumo, a ideia geral do livro é repensar os axiomas dentro da arquitetura de  software, entender os trade-offs envolvidos, sempre levando em consideração o ecossistema de desenvolvimento que temos atualmente. 
 
-## Capítulo 1 - Introduction
+## Capítulo 1 - Introdução
 
 ### *Roadmap* para um Software Architect
 
@@ -43,16 +43,16 @@ O autor destaca quatro motivos principais:
 
 Uma frase bem famosa do *Ralph Johnson* é citada
 
-> *"Archtecture is about the important stuff... whatever that is."* (Arquitetura é sobre a parte importante... seja lá o que seja) - Ralph Johnson
+> *"Archtecture is about the important stuff... whatever that is."* (Arquitetura é sobre a parte importante... seja lá o que for) - Ralph Johnson
 
-Ele argumenta que definir o que é um arquiteto de software é algo difícil. A industria não tem uma definição em função do amplo escopo de habilidades que um *Software Architect* necessita, além de que o escopo muda constantemente buscando um equilíbrio (novamente a ideia de *Dynamic Equilibrium*). 
+Ele argumenta que é complicado definir o que é um arquiteto de software. A industria não tem uma definição em função do amplo escopo de habilidades que um *Software Architect* necessita, além de que o escopo muda constantemente buscando um equilíbrio (novamente a ideia de *Dynamic Equilibrium*). 
 
 Por exemplo, até algum tempo atrás dizia-se que o *Software Architect* era a pessoa que lidava com a parte dos sistemas que __eram difíceis (ou custosas $$) de mudar__.
 Embora parte disso ainda seja verdade, estilos arquiteturais como microsserviços vão de encontro a essa ideia, pois visam a construção incremental do Software, de forma que uma mudança estrutural não se torne cara.
 
 ### Definição de *Software Architecture*
 
-O autor tenta responder a essa pergunta respondendo a seguinte pergunta: __O que é analisado quando um arquiteto de software analisa uma arquitetura?__ 
+O autor tenta responder a essa pergunta respondendo a uma outra pergunta: __O que é analisado quando um arquiteto de software analisa uma arquitetura?__ 
 
 Para o autor, o que um arquiteto deve analisar são um conjunto de quatro coisas: 
 
@@ -62,7 +62,7 @@ Se refere ao tipo de estilo arquitetural, por exemplo: microsserviços, multicam
 
 - 2. Características que um sistema deve suportar ("ilities").
 
-Referem-se aos critérios de sucesso de um sistema, sem relação com a sua funcionalidade, mas que são necessários para seu funcionamento de maneira adequada. Por exemplo: Availability (disponibilidade), Scalability (escalabilidade), testability testabilidade e etc.  
+Referem-se aos critérios de sucesso de um sistema, sem relação com a sua funcionalidade, mas que são necessários para seu funcionamento de maneira adequada. Por exemplo: availability (disponibilidade), scalability (escalabilidade), testability (testabilidade) e etc.  
 
 - 3. Decisões arquiteturais.
 
@@ -78,7 +78,7 @@ A diferença entre o 3 (decisões arquiteturais) para o 4 (princípios de design
 
 ### Definição da função de um Software Architect
 
-Nessa parte do capítulo o autor argumenta que definir o que faz um *Software Archtect* também é difícil de definir, visto que a função pode variar de empresa para empresa. Por essa razão, o autor preferer focar nas __expectativas__ da função, citando oito como principais. 
+Nessa parte do capítulo o autor argumenta que definir o que faz um *Software Archtect* também é difícil, visto que a função pode variar de empresa para empresa. Por essa razão, o autor preferer focar nas __expectativas__ da função, citando oito como principais. 
 
 Ele explica cada uma dessas funções detalhadamente, para que não fique muito longo, vou tentar sintetizar os pontos chave. 
 
@@ -134,7 +134,18 @@ Nas páginas seguintes, o autor se esforça para distinguir o conceito de *Proce
 
 > Por outro lado, Práticas de engenharia de Software são agnósticas a processos. Por exemplo, a utilização de CI é uma prática de engenharia que não depende de nenhum tipo particular de processo. 
 
-Ao longo dos últimos anos, várias práticas de engenharia de software foram adotadas por metodologias de desenvolvimento, como o XP (Extreme programming), por exemplo: automação, testes, SSOT e etc. Isso evidencia a diferença entre processo e engenharia.
+Essa diferença se torna ainda mais evidente quando vemos que, ao longo dos últimos anos, várias práticas de engenharia de software (automação, testes, SSOT) foram adotadas por metodologias de desenvolvimento, como o XP (Extreme programming), por exemplo.
 
 As práticas de engenharia são importantes e não devem ser desprezadas, porque elas estão intimamente relacionadas com a arquitetura da aplicação que está sendo desenvolvida. __Assim como existem diferentes arquiteturas para diferentes problemas, existem diferentes práticas de engenharia para diferentes problemas - a relação aqui é simbiótica.__ 
+
+### Leis da Arquitetura de Software
+
+Por fim, o autor descreve duas leis gerais que regem a arquitetura de software e que vão permear toda a ideia central do livro. 
+
+- 1. *"Tudo na arquitetura de software é um trade-off".* (Se um arquiteto pensa que descobriu algo que não tenha um trade-off, é muito provável que ele não tenha o identificado ainda)
+- 2. *"O porquê é mais importante do que o como".* 
+
+## Próximo artigo da série
+
+*Artigo e leitura ainda em andamento... Em breve o link aparecerá por aqui. Grato*
 
