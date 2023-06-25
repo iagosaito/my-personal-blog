@@ -15,6 +15,8 @@ params:
     - name: goodreads
       url: https://www.goodreads.com/user/show/164680356-iago-saito
 
+  googleAnalytics: G-75TR585LH3
+
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: false
