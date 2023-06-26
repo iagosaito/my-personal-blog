@@ -13,7 +13,7 @@ O objetivo do autor é estabelecer uma definição do que é um axioma e como is
 De acordo com o autor, *"um axioma é uma sentença que é considerada como sendo estabelecida, aceita e tida como verdade em si mesmo"*. Um exemplo
 de um axioma famoso na matemática é o [__axioma da igualdade de Peano__](https://pt.wikipedia.org/wiki/Axiomas_de_Peano#:~:text=Para%20todos%20os%20n%C3%BAmeros%20naturais%20x%2C%20y%2C%20e%20z%2C,s%C3%A3o%20fechados%20em%20sua%20igualdade.) usado dentro da teoria dos conjuntos: 
 
-> Sabendo que A = C e B = C, então podemos afirmar que B = C. 
+> Sabendo que A = C e B = C, então podemos afirmar que A = C. 
 
 Embora essas regras sejam rígidas na matématica, o autor acredita que 
 dentro da área de engenharia de software __isso não deveria existir__.
