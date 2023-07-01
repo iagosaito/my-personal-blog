@@ -147,5 +147,5 @@ Por fim, o autor descreve duas leis gerais que regem a arquitetura de software e
 
 ## Próximo artigo da série
 
-*Artigo e leitura ainda em andamento... Em breve o link aparecerá por aqui. Grato*
+[Resumo/Análise do livro: Fundamentals of Software Architecture - Cap. 2]({{< ref "fundamentals_of_software_arch_chap_2.md" >}} "Capítulo 2")
 
