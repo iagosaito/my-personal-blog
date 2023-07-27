@@ -27,7 +27,7 @@ Alcançar modularidade é um princípio __implícito e organizador__. Implícito
 
 O autor sugere a seguinte definição sobre modularidade: 
 
-> "__Um agrupamento lógico de códigos relacionados entre si__, o que pode ser um conjunto de classes numa linguagem orientada a objeto ou um conjunto de função em linguagens estruturadas ou funcionais"
+> "__Um agrupamento lógico de códigos relacionados entre si__, o que pode ser um conjunto de classes numa linguagem orientada a objeto ou um conjunto de funções em linguagens estruturadas ou funcionais"
 
 Algumas linguagens de programações possuem mecanismos de modularidade, ex: _packages_ no Java e _namespaces_ em .NET.
 
@@ -37,3 +37,19 @@ Algumas linguagens de programações possuem mecanismos de modularidade, ex: _pa
 Dada a importância de modularidade para desenvolvedores e arquitetos, alguns pesquisadores criaram métricas agnósticas a linguagens de programação para ajudar a entender os níveis de modularidade no sistemas, são essas: __coesão__, __acoplamento__ e __connascence__ (não encontrei uma palavra para traduzir a última). 
 
 ### Coesão
+
+Coesão é a medida de quão as partes estão relacionadas entre si. Um módulo coeso é aquele cujas partes devem permanecer juntas, porque caso elas sejas quebradas, são necessárias várias chamads entre as partes para alcançar o resultado esperado, gerando um aumento no acoplamento. 
+
+Pesquisadores classificaram diferentes medidas de coesão dentro de uma aplicação, da melhor pra pior: 
+
+- _Functional Cohesion_
+- _Sequential Cohesion_
+- _Communicational Cohesion_
+- _Procedural Cohesion_
+- _Temporal Cohesion_
+- _Logical Cohesion_
+- _Coincidental Cohesion_
+
+O livro define brevemente cada tipo de coesão, como é um assunto bem extenso, segue o link de duas referências para quem quiser se aprofundar nos detalhes: [Software Engineering Coupling and Cohesion](https://www.geeksforgeeks.org/software-engineering-coupling-and-cohesion/) e [CS UNC - Intramodule Cohesion](https://www.cs.unc.edu/~stotts/COMP145/cohesion.html)
+
+
