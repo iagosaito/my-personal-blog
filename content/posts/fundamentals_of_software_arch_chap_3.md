@@ -52,7 +52,7 @@ Pesquisadores classificaram diferentes medidas de coesão dentro de uma aplicaç
 
 O livro define brevemente cada tipo de coesão, como é um assunto bem extenso, segue o link de duas referências para quem quiser se aprofundar nos detalhes: [Software Engineering Coupling and Cohesion](https://www.geeksforgeeks.org/software-engineering-coupling-and-cohesion/) e [CS UNC - Intramodule Cohesion](https://www.cs.unc.edu/~stotts/COMP145/cohesion.html)
 
-Cientistas da computação desenvolveram uma maneira de metrificar a coesão dentro de aplicações,a mais conhecida se chama __Chindamber and Kemerer Object-oriented metrics suite__ ou LCOM.
+Cientistas da computação desenvolveram uma maneira de metrificar a coesão dentro de aplicações,a mais conhecida se chama __Chidamber and Kemerer Object-oriented metrics suite__ ou LCOM.
 
 Como o LCOM funciona?
 
@@ -86,11 +86,25 @@ Sendo que:
 - mA - número de métodos que acessam a variável (atributo).
 
 
-Entretanto, como tudo dentro da Engenharia de Software são trade-offs, o modelo de medida de coesão LCOM não está imune. O LCOM é útil para medir a falta de coesão estrutural, mas ele não consegue determinar de maneira lógica, se as peças da classes se encaixam. 
+Entretanto, como tudo dentro da Engenharia de Software são trade-offs, o modelo de medida de coesão LCOM não está imune. O LCOM é útil para medir a falta de coesão estrutural, mas ele não consegue determinar de maneira lógica se as peças da classes encaixam. 
 
 Para isso, outro tipo de medida é mais apropriada. 
 
-## Coesão.
+## Acomplamento
+
+Em 1979, Edward Yourdon e Larry Constantine publicaram __Structure Design: Fundamentals of Discipline of Computer Program and System Design (Prentice-Hall)__. Foi nessa publicação que eles definiram dois conceitos importantes: métricas aferentes e eferentes.
+
+Acoplamento aferente mede o número de conexões de entrada de um determinado artefato, enquanto acomplamento eferente mede o número de conexões de saída para artefatos de código.  
+
+A partir disso, o livro segue com outras métricas derivadas desses conceitos. Essas métricas foram criadas por Robert Martin e são aplicadas para diferentes linguagens de programação. Elas são: **Abstração, instabilidade e distância da sequência principal**.
+
+### Abstração
+
+A abstração envolve a razão entre a abstração vs implementação. Por exemplo, imagine uma classe que contenha mais de 5000 linhas de código tudo dentro de um único método main(). O númerador de abstração seria 1, enquanto o numerador seria 5000, resultando num valor de abstração que estaria beirando 0. 
+
+### Instabilidade
+
+Responsável por medir o acoplamento eferente e aferente dentro de uma aplicação. A instabilidade mede a volatidade. Se uma classe faz chamadas para muitas outras classes, essa classe possui um nível alto de instabilidade, alto acoplamento e por isso é altamente suscetível a quebras caso haja uma alteração em algum método. 
 
 
 
