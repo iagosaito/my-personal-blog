@@ -1,7 +1,7 @@
 ---
-title: "Primeiro_ano"
+title: "Nosso primeiro ano"
 date: 2023-11-17T02:47:07-03:00
-draft: true
+draft: false
 tags: [pessoal, pensamentos, yara]
 categories: [blog]
 ---
