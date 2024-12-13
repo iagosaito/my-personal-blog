@@ -29,3 +29,7 @@ To get a local copy of the blog running, follow these steps:
    ```
 
    Your site should be running at [http://localhost:1313](http://localhost:1313).
+
+## Hosting
+
+This blog is hosted by [Netlify](https://www.netlify.com/).
