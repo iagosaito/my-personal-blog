@@ -7,7 +7,10 @@ googleAnalytics: G-75TR585LH3
 params:
 
   homeInfoParams: 
-    content: Ninguém lê mais nada hoje em dia, mas eu continuo a escrever mesmo assim. Uns artigos aí principalmente sobre tech, mas tem sobre a vida também. Abraços!
+    content: "Ninguém lê mais nada hoje em dia, mas continuo a escrever mesmo assim. 
+    
+
+    Muito sobre tech, um pouco sobre a vida; mas honesto, como deveria ser. Abraços!"
   socialIcons:
     - name: github
       url: https://github.com/iagosaito
