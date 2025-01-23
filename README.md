@@ -12,7 +12,6 @@ In a world where nobody reads anymore, I'm keeping on writing. You can access my
 
 To get a local copy of the blog running, follow these steps:
 
-
 1. **Install dependencies**:
 
    To start this project, you must have [Hugo](https://gohugo.io/getting-started/installing/) and [Go](https://golang.org/doc/install) installed. Verify the badges at the top of this README to check the versions.
