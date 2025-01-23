@@ -10,7 +10,7 @@ In a world where nobody reads anymore, I'm keeping on writing. You can access my
 
 ## Setup and Installation
 
-To get a local copy of the blog running, follow these steps:
+To get a local copy of this blog running, follow these steps:
 
 1. **Install dependencies**:
 
