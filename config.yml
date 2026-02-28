@@ -5,11 +5,11 @@ theme: "PaperMod"
 googleAnalytics: G-75TR585LH3
 
 params:
-
+  author:
+    name: Iago Saito
+    email: iago@email.com
   homeInfoParams: 
     content: "Ninguém lê mais nada hoje em dia, mas continuo a escrever mesmo assim. 
-    
-
     Muito sobre tech, um pouco sobre a vida; mas honesto, como deveria ser. Abraços!"
   socialIcons:
     - name: github
@@ -18,7 +18,6 @@ params:
       url: https://open.spotify.com/user/iagosaito?si=bd12e50a5615400d
     - name: goodreads
       url: https://www.goodreads.com/user/show/164680356-iago-saito
-
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: false
@@ -39,6 +38,11 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
+
+author:
+  name: Iago Saito
+  email: iago1999@gmail.com
 
 menu:
   main:
