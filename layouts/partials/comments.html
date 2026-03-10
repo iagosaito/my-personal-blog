@@ -3,16 +3,24 @@
 {{- if $appID -}}
 {{- $host := ($cusdis.host | default "https://cusdis.com") | replaceRE "/+$" "" -}}
 {{- $lang := $cusdis.lang | default "" -}}
-<div
-  id="cusdis_thread"
-  data-host="{{ $host }}"
-  data-app-id="{{ $appID }}"
-  data-page-id="{{ .RelPermalink }}"
-  data-page-url="{{ .Permalink }}"
-  data-page-title="{{ .Title }}"
-  {{- with $lang }}
-  data-lang="{{ . }}"
-  {{- end }}
-></div>
+{{- $theme := $cusdis.theme | default "light" -}}
+<section class="comments-section" aria-labelledby="comments-heading">
+  <div class="comments-section__header">
+    <h2 id="comments-heading" class="comments-section__title">Comments</h2>
+  </div>
+  <div
+    id="cusdis_thread"
+    class="comments-section__embed"
+    data-host="{{ $host }}"
+    data-app-id="{{ $appID }}"
+    data-page-id="{{ .RelPermalink }}"
+    data-page-url="{{ .Permalink }}"
+    data-page-title="{{ .Title }}"
+    data-theme="{{ $theme }}"
+    {{- with $lang }}
+    data-lang="{{ . }}"
+    {{- end }}
+  ></div>
+</section>
 <script defer src="{{ printf "%s/js/cusdis.es.js" $host }}"></script>
 {{- end -}}

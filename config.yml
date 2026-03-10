@@ -36,6 +36,8 @@ params:
     appId: "7d8954cd-fd07-49cc-9bc3-01b61fb1da61"
     # Optional: override only if self-hosting Cusdis
     host: https://cusdis.com
+    # Optional: force widget theme; "light" avoids unreadable labels in dark mode
+    theme: light
     # Optional: widget language (for example: en, pt-BR)
     lang: ""
   hidemeta: false
