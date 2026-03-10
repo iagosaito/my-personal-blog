@@ -87,7 +87,7 @@ Opa! A nossa tentativa (13) é igual ao alvo (13)! Parabéns, o algoritmo foi ex
 ## Código
 O código abaixo representa um algoritmo de busca binária criado a partir da linguagem de programação Golang.
 
-```
+```go
 package main
 
 import "fmt"
@@ -136,4 +136,3 @@ Um ponto acerca do código merece consideração:
 - https://en.wikipedia.org/wiki/Binary_search_algorithm
 - Learning Algorithms, by George Heineiman
 - Grokking Algorithms — An illustrated guide for programmers and other curious people, by Aditya Y. Bhargava
-

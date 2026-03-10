@@ -47,7 +47,12 @@ markup:
   goldmark:
     renderer:
       unsafe: true
-
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+    noClasses: false
+    style: github-dark
 
 author:
   name: Iago Saito
