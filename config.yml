@@ -28,7 +28,14 @@ params:
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
-  comments: false
+  comments: true
+  cusdis:
+    # Required: set this to your Cusdis App ID from https://cusdis.com/
+    appId: ""
+    # Optional: override only if self-hosting Cusdis
+    host: https://cusdis.com
+    # Optional: widget language (for example: en, pt-BR)
+    lang: ""
   hidemeta: false
   hideSummary: false
   showtoc: true

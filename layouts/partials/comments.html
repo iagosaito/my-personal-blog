@@ -1,3 +1,18 @@
-{{- /* Comments area start */ -}}
-{{- /* to add comments read => https://gohugo.io/content-management/comments/ */ -}}
-{{- /* Comments area end */ -}}
+{{- $cusdis := site.Params.cusdis -}}
+{{- $appID := $cusdis.appId | default "" -}}
+{{- if $appID -}}
+{{- $host := ($cusdis.host | default "https://cusdis.com") | replaceRE "/+$" "" -}}
+{{- $lang := $cusdis.lang | default "" -}}
+<div
+  id="cusdis_thread"
+  data-host="{{ $host }}"
+  data-app-id="{{ $appID }}"
+  data-page-id="{{ .RelPermalink }}"
+  data-page-url="{{ .Permalink }}"
+  data-page-title="{{ .Title }}"
+  {{- with $lang }}
+  data-lang="{{ . }}"
+  {{- end }}
+></div>
+<script defer src="{{ printf "%s/js/cusdis.es.js" $host }}"></script>
+{{- end -}}
