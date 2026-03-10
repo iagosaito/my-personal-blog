@@ -31,7 +31,7 @@ params:
   comments: true
   cusdis:
     # Required: set this to your Cusdis App ID from https://cusdis.com/
-    appId: ""
+    appId: "7d8954cd-fd07-49cc-9bc3-01b61fb1da61"
     # Optional: override only if self-hosting Cusdis
     host: https://cusdis.com
     # Optional: widget language (for example: en, pt-BR)
