@@ -1,0 +1,14 @@
+{{- if or .Params.author site.Params.author }}
+{{- $author := (.Params.author | default site.Params.author) }}
+{{- if reflect.IsSlice $author }}
+{{- delimit $author ", " }}
+{{- else if reflect.IsMap $author }}
+{{- with $author.name }}
+{{- . }}
+{{- else }}
+{{- $author }}
+{{- end }}
+{{- else }}
+{{- $author }}
+{{- end }}
+{{- end -}}

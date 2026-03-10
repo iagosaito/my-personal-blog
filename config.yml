@@ -54,10 +54,6 @@ markup:
     noClasses: false
     style: github-dark
 
-author:
-  name: Iago Saito
-  email: iago1999@gmail.com
-
 menu:
   main:
     - identifier: categories
