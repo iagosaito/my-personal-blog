@@ -1,0 +1,17 @@
+{{- $gaID := "" -}}
+{{- with site.Config.Services.GoogleAnalytics.ID -}}
+  {{- $gaID = . -}}
+{{- else -}}
+  {{- with site.GoogleAnalytics -}}
+    {{- $gaID = . -}}
+  {{- end -}}
+{{- end -}}
+{{- if $gaID -}}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ $gaID }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ $gaID }}');
+</script>
+{{- end -}}

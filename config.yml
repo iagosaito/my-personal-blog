@@ -2,7 +2,9 @@ baseURL: http://iagosaito.com
 languageCode: en-us
 title: iagosaito.com
 theme: "PaperMod"
-googleAnalytics: G-75TR585LH3
+services:
+  googleAnalytics:
+    id: G-75TR585LH3
 
 params:
   author:
