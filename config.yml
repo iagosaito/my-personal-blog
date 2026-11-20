@@ -1,5 +1,6 @@
 baseURL: http://iagosaito.com
-locale: en-us
+defaultContentLanguage: pt
+defaultContentLanguageInSubdir: false
 title: iagosaito.com
 theme: "PaperMod"
 services:
@@ -10,9 +11,6 @@ params:
   author:
     name: Iago Saito
     email: iago@email.com
-  homeInfoParams: 
-    content: "Ninguém lê mais nada hoje em dia, mas continuo a escrever mesmo assim. 
-    Muito sobre tech, um pouco sobre a vida; mas honesto, como deveria ser. Abraços!"
   socialIcons:
     - name: github
       url: https://github.com/iagosaito
@@ -56,17 +54,76 @@ markup:
     noClasses: false
     style: github-dark
 
-menu:
-  main:
-    - identifier: categories
-      name: Categories
-      url: /categories/
-      weight: 10
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 20
-    - identifier: archive
-      name: Archive
-      url: /archives/
-      weight: 30
+languages:
+  pt:
+    label: Português
+    locale: pt-BR
+    weight: 1
+    title: iagosaito.com
+    params:
+      cusdisLang: pt-BR
+      homeInfoParams:
+        content: "Ninguém lê mais nada hoje em dia, mas continuo a escrever mesmo assim.
+          Muito sobre tech, um pouco sobre a vida; mas honesto, como deveria ser. Abraços!"
+    menus:
+      main:
+        - identifier: categories
+          name: Categorias
+          url: /categories/
+          weight: 10
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 20
+        - identifier: archive
+          name: Arquivo
+          url: /archives/
+          weight: 30
+  es:
+    label: Español
+    locale: es-ES
+    weight: 3
+    title: iagosaito.com
+    params:
+      cusdisLang: es
+      homeInfoParams:
+        content: "Hoy en día ya nadie lee nada, pero sigo escribiendo de todos modos.
+          Mucho sobre tecnología, un poco sobre la vida; pero honesto, como debe ser. ¡Un abrazo!"
+    menus:
+      main:
+        - identifier: categories
+          name: Categorías
+          url: /categories/
+          weight: 10
+        - identifier: tags
+          name: Etiquetas
+          url: /tags/
+          weight: 20
+        - identifier: archive
+          name: Archivo
+          url: /archives/
+          weight: 30
+  en:
+    label: English
+    locale: en-US
+    weight: 2
+    title: iagosaito.com
+    params:
+      cusdisLang: en
+      homeInfoParams:
+        content: "Nobody reads anything these days, but I keep writing anyway.
+          A lot about tech, a little about life; but honest, as it should be. Cheers!"
+    menus:
+      main:
+        - identifier: categories
+          name: Categories
+          url: /categories/
+          weight: 10
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 20
+        - identifier: archive
+          name: Archive
+          url: /archives/
+          weight: 30

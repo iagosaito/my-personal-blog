@@ -2,18 +2,24 @@
 {{- $appID := $cusdis.appId | default "" -}}
 {{- if $appID -}}
 {{- $host := ($cusdis.host | default "https://cusdis.com") | replaceRE "/+$" "" -}}
-{{- $lang := $cusdis.lang | default "" -}}
+{{- $lang := site.Params.cusdisLang | default ($cusdis.lang | default "") -}}
+{{- /* Share one Cusdis thread across translations: use the default-language page ID */ -}}
+{{- $pageID := .RelPermalink -}}
+{{- $defaultLang := hugo.Sites.Default.Language.Lang -}}
+{{- range .AllTranslations -}}
+  {{- if eq .Lang $defaultLang }}{{ $pageID = .RelPermalink }}{{ end -}}
+{{- end -}}
 {{- $theme := $cusdis.theme | default "light" -}}
 <section class="comments-section" aria-labelledby="comments-heading">
   <div class="comments-section__header">
-    <h2 id="comments-heading" class="comments-section__title">Comments</h2>
+    <h2 id="comments-heading" class="comments-section__title">{{ i18n "comments_title" }}</h2>
   </div>
   <div
     id="cusdis_thread"
     class="comments-section__embed"
     data-host="{{ $host }}"
     data-app-id="{{ $appID }}"
-    data-page-id="{{ .RelPermalink }}"
+    data-page-id="{{ $pageID }}"
     data-page-url="{{ .Permalink }}"
     data-page-title="{{ .Title }}"
     data-theme="{{ $theme }}"

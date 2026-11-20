@@ -1,9 +1,9 @@
 
 # iagosaito.com
 
-[![Hugo Version](https://img.shields.io/badge/Hugo-v0.140.0--DEV-blue.svg)](https://gohugo.io)
+[![Hugo Version](https://img.shields.io/badge/Hugo-v0.170.1-blue.svg)](https://gohugo.io)
 [![Go Version](https://img.shields.io/badge/Go-v1.23.4-blue.svg)](https://golang.org/dl/)
-[![PaperMod Theme](https://img.shields.io/badge/PaperMod-v8.0-blue)](https://adityatelange.github.io/hugo-PaperMod/)
+[![PaperMod Theme](https://img.shields.io/badge/PaperMod-master-blue)](https://adityatelange.github.io/hugo-PaperMod/)
 [![Website](https://img.shields.io/badge/Website-iagosaito.com-white)](https://www.iagosaito.com)
 
 In a world where nobody reads anymore, I'm keeping on writing. You can access my thoughts on the blog at https://www.iagosaito.com.
@@ -28,6 +28,22 @@ To get a local copy of this blog running, follow these steps:
    ```
 
    Your site should be running at [http://localhost:1313](http://localhost:1313).
+
+## Languages
+
+The site is available in Portuguese (default, served at `/`), Spanish (`/es/`) and English (`/en/`), using Hugo's [multilingual mode](https://gohugo.io/content-management/multilingual/). Languages, per-language menus and the home text are configured under `languages` in `config.yml`.
+
+To publish a post in every language, create one file per language with the same base name:
+
+```
+content/posts/my-post.md      # Portuguese (default)
+content/posts/my-post.es.md   # Spanish
+content/posts/my-post.en.md   # English
+```
+
+Hugo links files with the same base name as translations of each other. Keep `date`, `tags` and `categories` identical across them. A post without a translation shows up only in its own language.
+
+UI strings that aren't provided by the PaperMod theme live in `i18n/<lang>.yaml`.
 
 ## Hosting
 
