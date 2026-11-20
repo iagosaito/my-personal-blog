@@ -1,17 +1,79 @@
-/* Site accent palette. Blue matches the tint already used in comments.css. */
+/*
+ * "Papel e tinta" palette.
+ * Warm paper background instead of pure white, warm ink text,
+ * an ink-blue accent (links, current language, active menu) and a
+ * terracotta secondary accent (quotes, tags, selection, card hover).
+ * Both accents echo the tints already used in comments.css.
+ *
+ * To retune the whole site, change the variables below.
+ */
 :root {
-    --accent: rgb(37, 99, 201);
+    /* PaperMod base variables */
+    --theme: rgb(246, 241, 233);
+    --entry: rgb(252, 249, 244);
+    --primary: rgb(38, 33, 28);
+    --secondary: rgb(112, 102, 90);
+    --tertiary: rgb(214, 202, 185);
+    --content: rgb(48, 42, 36);
+    --code-block-bg: rgb(36, 39, 58);
+    --code-bg: rgb(236, 228, 215);
+    --border: rgb(230, 220, 205);
+
+    /* Accents */
+    --accent: rgb(36, 86, 172);
     --accent-contrast: rgb(255, 255, 255);
-    --accent-soft: rgba(37, 99, 201, 0.1);
+    --accent-soft: rgba(36, 86, 172, 0.1);
+    --warm: rgb(186, 88, 52);
+    --warm-soft: rgba(186, 88, 52, 0.1);
 }
 
 :root[data-theme="dark"] {
-    --accent: rgb(110, 168, 254);
-    --accent-contrast: rgb(18, 22, 30);
-    --accent-soft: rgba(110, 168, 254, 0.14);
+    --theme: rgb(27, 25, 22);
+    --entry: rgb(37, 34, 30);
+    --primary: rgb(238, 231, 220);
+    --secondary: rgb(168, 157, 142);
+    --tertiary: rgb(78, 71, 62);
+    --content: rgb(220, 212, 199);
+    --code-block-bg: rgb(36, 39, 58);
+    --code-bg: rgb(52, 47, 41);
+    --border: rgb(55, 50, 44);
+
+    --accent: rgb(128, 172, 242);
+    --accent-contrast: rgb(20, 22, 28);
+    --accent-soft: rgba(128, 172, 242, 0.14);
+    --warm: rgb(229, 142, 106);
+    --warm-soft: rgba(229, 142, 106, 0.14);
 }
 
-/* Active item in the main menu */
+/* List pages: PaperMod paints them with --code-bg; use the paper tone so cards read as sheets on it */
+.list,
+[data-theme="dark"] .list {
+    background: var(--theme);
+}
+
+::selection {
+    background: var(--warm-soft);
+    color: var(--primary);
+}
+
+[data-theme="dark"] ::selection {
+    background: rgba(229, 142, 106, 0.3);
+}
+
+/* Header */
+.header {
+    border-bottom: 1px solid var(--border);
+}
+
+.logo a {
+    color: var(--primary);
+}
+
+.logo a:hover {
+    color: var(--accent);
+}
+
+/* Main menu */
 .menu .active {
     color: var(--accent);
     text-decoration-color: var(--accent);
@@ -21,7 +83,40 @@
     color: var(--accent);
 }
 
-/* Links inside posts */
+/* Home intro card: soft wash of both accents */
+.first-entry.home-info {
+    min-height: auto;
+    padding: calc(var(--gap) * 1.5);
+    border: 1px solid var(--border);
+    border-radius: calc(var(--radius) + 6px);
+    background:
+        radial-gradient(circle at top left, var(--accent-soft), transparent 45%),
+        radial-gradient(circle at bottom right, var(--warm-soft), transparent 45%),
+        var(--entry);
+}
+
+/* Post cards */
+.post-entry {
+    box-shadow: 0 1px 2px rgba(60, 40, 20, 0.04);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.post-entry:hover,
+.post-entry:focus-within {
+    border-color: var(--warm);
+    box-shadow: 0 6px 18px rgba(60, 40, 20, 0.08);
+}
+
+[data-theme="dark"] .post-entry:hover,
+[data-theme="dark"] .post-entry:focus-within {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.entry-header h2 {
+    color: var(--primary);
+}
+
+/* Post body */
 .md-content a:not(.anchor) {
     text-decoration-color: var(--accent);
     text-decoration-thickness: 1px;
@@ -32,7 +127,64 @@
     text-decoration-thickness: 2px;
 }
 
+.md-content blockquote {
+    padding: 0.6rem 1rem;
+    border-inline-start: 0.25rem solid var(--warm);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    background: var(--warm-soft);
+}
+
+.md-content hr {
+    background: var(--tertiary);
+}
+
+.post-content code {
+    color: var(--primary);
+}
+
 /* Table of contents */
+.toc {
+    border: 1px solid var(--border);
+    background: var(--entry);
+}
+
 .toc a:hover {
+    color: var(--accent);
+}
+
+/* Tags at the end of a post */
+.post-tags a {
+    border: 1px solid var(--border);
+    background: var(--entry);
+}
+
+.post-tags a:hover {
+    color: var(--warm);
+    border-color: var(--warm);
+    background: var(--warm-soft);
+}
+
+/* Post meta, breadcrumbs */
+.breadcrumbs a:hover,
+.post-meta a:hover {
+    color: var(--accent);
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid var(--border);
+}
+
+.footer a:hover {
+    color: var(--accent);
+}
+
+/* Scroll-to-top button */
+.top-link {
+    background: var(--entry);
+    border: 1px solid var(--border);
+}
+
+.top-link:hover {
     color: var(--accent);
 }
