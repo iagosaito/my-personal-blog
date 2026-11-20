@@ -1,0 +1,38 @@
+/* Site accent palette. Blue matches the tint already used in comments.css. */
+:root {
+    --accent: rgb(37, 99, 201);
+    --accent-contrast: rgb(255, 255, 255);
+    --accent-soft: rgba(37, 99, 201, 0.1);
+}
+
+:root[data-theme="dark"] {
+    --accent: rgb(110, 168, 254);
+    --accent-contrast: rgb(18, 22, 30);
+    --accent-soft: rgba(110, 168, 254, 0.14);
+}
+
+/* Active item in the main menu */
+.menu .active {
+    color: var(--accent);
+    text-decoration-color: var(--accent);
+}
+
+.menu a:hover {
+    color: var(--accent);
+}
+
+/* Links inside posts */
+.md-content a:not(.anchor) {
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 1px;
+}
+
+.md-content a:not(.anchor):hover {
+    color: var(--accent);
+    text-decoration-thickness: 2px;
+}
+
+/* Table of contents */
+.toc a:hover {
+    color: var(--accent);
+}
