@@ -45,6 +45,8 @@ Hugo links files with the same base name as translations of each other. Keep `da
 
 UI strings that aren't provided by the PaperMod theme live in `i18n/<lang>.yaml`.
 
+Visitors who open the home page (`/`) are sent to their browser's language (`/en/` or `/es/`) when the site has it, unless they already picked a language in the header switcher, which is remembered. Posts and other deep links are never redirected, and crawlers always get the Portuguese home. See `layouts/_partials/extend_head.html`.
+
 ## Hosting
 
 This blog is hosted by [Netlify](https://www.netlify.com/).

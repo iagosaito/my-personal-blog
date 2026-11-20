@@ -1,0 +1,62 @@
+{{- /*
+  Open the site in the visitor's language.
+
+  Runs only on the default-language home page ("/"), synchronously in <head>
+  so the redirect happens before anything is painted.
+
+  1. If the visitor picked a language in the header switcher, that choice
+     (localStorage "pref-lang") wins.
+  2. Otherwise, use the first browser language (navigator.languages) that the
+     site has, e.g. en-GB -> /en/, es-AR -> /es/.
+  3. No match: stay on the default language.
+
+  Crawlers are not redirected, so the default home stays indexable; the other
+  languages are discoverable through the hreflang alternate links.
+
+  Deep links (posts, tags...) are never redirected: a shared link opens as sent.
+*/ -}}
+{{- $homes := dict -}}
+{{- range hugo.Sites -}}
+  {{- $homes = merge $homes (dict .Language.Lang .Home.RelPermalink) -}}
+{{- end -}}
+{{- $defaultLang := hugo.Sites.Default.Language.Lang -}}
+<script>
+    (function () {
+        var homes = {{ $homes }};
+        var storageKey = "pref-lang";
+
+        // Remember an explicit choice made in the header language switcher.
+        document.addEventListener("click", function (event) {
+            var link = event.target.closest && event.target.closest(".lang-menu a[hreflang]");
+            if (!link) return;
+            try {
+                localStorage.setItem(storageKey, link.getAttribute("hreflang"));
+            } catch (e) { }
+        });
+
+        {{- if and .IsHome (eq .Lang $defaultLang) }}
+        try {
+            if (/bot|crawl|spider|slurp|preview|facebookexternalhit|lighthouse|headless/i.test(navigator.userAgent)) return;
+
+            var target = null;
+            var saved = localStorage.getItem(storageKey);
+            if (saved && homes[saved]) {
+                target = saved;
+            } else {
+                var languages = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ""];
+                for (var i = 0; i < languages.length; i++) {
+                    var code = String(languages[i]).toLowerCase().split("-")[0];
+                    if (homes[code]) {
+                        target = code;
+                        break;
+                    }
+                }
+            }
+
+            if (target && target !== {{ .Lang }}) {
+                window.location.replace(homes[target] + window.location.search + window.location.hash);
+            }
+        } catch (e) { }
+        {{- end }}
+    })();
+</script>
