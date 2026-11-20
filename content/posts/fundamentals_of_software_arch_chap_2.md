@@ -136,7 +136,7 @@ Na última parte do capítulo, o autor analisa as dificuldades para o arquiteto 
 
 Perder a prática de escrever código não é saudável. Ao mesmo tempo, cria-se um gargalo terrível caso o arquiteto se torne "dono" do código do time. Muitas vezes isso ocorre quando o arquiteto puxa para si as atividades mais complexas do projeto - que na maioria das vezes são aquelas que vão além do framework utilizado no momento. 
 
-O autor apresenta três maneiras de como o arquiteto pode, continuamente, trabalhar o hands-on sem prejudicar o time: 
+O autor apresenta cinco maneiras de como o arquiteto pode, continuamente, trabalhar o hands-on sem prejudicar o time: 
 
 - Criar POCs (Provas de conceito).
 

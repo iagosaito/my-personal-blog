@@ -129,7 +129,7 @@ func binarySearch(list []int, target int) int {
 
 Um ponto acerca do código merece consideração:
 
-- Existem duas variáveis que guardam referência ao início da lista (low) e ao final da lista (end). Quando eliminamos os elementos antes do meio, a variável low é atualizada, apontando para o elemento seguinte depois do meio; quando eliminamos os elementos depois do meio, a variável end é atualizada, apontando para o primeiro elemento antes do meio.
+- Existem duas variáveis que guardam referência ao início da lista (low) e ao final da lista (high). Quando eliminamos os elementos antes do meio, a variável low é atualizada, apontando para o elemento seguinte depois do meio; quando eliminamos os elementos depois do meio, a variável high é atualizada, apontando para o primeiro elemento antes do meio.
 
 ## Referências
 
