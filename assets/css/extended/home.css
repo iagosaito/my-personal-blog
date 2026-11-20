@@ -1,0 +1,87 @@
+/* Home intro card with a polaroid-style photo */
+.home-info--with-photo {
+    flex-direction: row;
+    align-items: center;
+    gap: calc(var(--gap) * 1.5);
+}
+
+.home-info__body {
+    flex: 1;
+    min-width: 0;
+}
+
+.home-photo {
+    flex: 0 0 auto;
+    width: 180px;
+    margin: 0;
+    padding: 10px 10px 30px;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    box-shadow:
+        0 10px 24px rgba(60, 40, 20, 0.14),
+        0 2px 6px rgba(60, 40, 20, 0.08);
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+/* A strip of "tape" holding the photo on the card */
+.home-photo::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 64px;
+    height: 20px;
+    transform: translateX(-50%) rotate(2deg);
+    background: var(--warm-soft);
+    border: 1px solid rgba(186, 88, 52, 0.18);
+    border-radius: 2px;
+    backdrop-filter: blur(1px);
+}
+
+.home-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+}
+
+.home-photo:hover {
+    transform: rotate(0deg) scale(1.03);
+    box-shadow:
+        0 14px 30px rgba(60, 40, 20, 0.18),
+        0 3px 8px rgba(60, 40, 20, 0.1);
+}
+
+[data-theme="dark"] .home-photo {
+    background: rgb(244, 238, 228);
+    border-color: transparent;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .home-photo:hover {
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.55);
+}
+
+@media (max-width: 600px) {
+    .home-info--with-photo {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--gap);
+    }
+
+    .home-photo {
+        align-self: center;
+        width: 160px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-photo,
+    .home-photo:hover {
+        transition: none;
+        transform: rotate(-3deg);
+    }
+}

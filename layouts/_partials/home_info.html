@@ -1,0 +1,34 @@
+{{- /*
+  Override of PaperMod's home_info.html: same content, plus a polaroid-style
+  photo next to the intro text. The image lives in assets/ so Hugo can
+  generate optimized WebP versions.
+*/ -}}
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info{{ with resources.Get "img/home/iago.png" }} home-info--with-photo{{ end }}">
+    {{- with resources.Get "img/home/iago.png" }}
+    {{- $small := .Resize "300x webp q85" }}
+    {{- $large := .Resize (printf "%dx webp q85" .Width) }}
+    <figure class="home-photo">
+        <img src="{{ $small.RelPermalink }}"
+            srcset="{{ $small.RelPermalink }} 300w, {{ $large.RelPermalink }} {{ $large.Width }}w"
+            sizes="(max-width: 600px) 160px, 180px"
+            width="{{ $small.Width }}" height="{{ $small.Height }}"
+            alt="{{ i18n "home_photo_alt" }}" loading="eager" decoding="async">
+    </figure>
+    {{- end }}
+    <div class="home-info__body">
+        {{- with .Title }}
+        <header class="entry-header">
+            <h1>{{ . | markdownify }}</h1>
+        </header>
+        {{- end }}
+        <div class="entry-content md-content">
+            {{ $opts := dict "display" "block" }}
+            {{ .Content | $.Page.RenderString $opts }}
+        </div>
+        <footer class="entry-footer">
+            {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+        </footer>
+    </div>
+</article>
+{{- end -}}
