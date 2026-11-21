@@ -43,8 +43,19 @@ params:
   showtoc: true
   tocopen: false
 
+# Post bundles: publish only the image versions a page actually uses
+# (the resized WebP files), not every original in the bundle folder.
+cascade:
+  - target:
+      path: "{/posts/**}"
+    build:
+      publishResources: false
+
 markup:
   goldmark:
+    parser:
+      # Standalone images are rendered as <figure> by the image render hook.
+      wrapStandAloneImageWithinParagraph: false
     renderer:
       unsafe: true
   highlight:

@@ -46,7 +46,7 @@ Image 1 below illustrates how a Kafka topic with three partitions works. Partiti
 
 As messages arrive at the partitions, they receive an incremental numeric ID called the offset, and they are read from beginning to end.
 
-![Representation of a Kafka topic with 3 partitions](/img/apachekafka/apachekafka_img1.jpg)
+![Representation of a Kafka topic with 3 partitions](apachekafka_img1.webp)
 
 > There is no guarantee that messages will be read in order across the same topic, since __this guarantee only exists for messages within the same partition.__
 >
@@ -67,11 +67,7 @@ You can think of it like this:
 
 Each broker is identified by a numeric ID and holds partitions of Kafka topics. Image 2 shows what a Cluster with two topics — A and B, with two and three partitions respectively — would look like.
 
-<figure>
-    <img src="/img/apachekafka/apachekafka_img2.jpg" alt="Alternative text">
-    <figcaption>Image 2 — Representation of a Kafka cluster with 2 topics — A and B distributed across the three brokers
-    </figcaption>
-</figure>
+![Representation of a Kafka cluster with 2 topics — A and B distributed across the three brokers](apachekafka_img2.webp "Image 2 — Representation of a Kafka cluster with 2 topics — A and B distributed across the three brokers")
 
 But what if the number of partitions is greater than the number of brokers?
 
@@ -103,11 +99,7 @@ Besides the replication factor, there is the concept of Leader and Replicas (in 
 
 In image 3 you can see who the Leader is and who the replicas (followers) of each partition are:
 
-<figure>
-    <img src="/img/apachekafka/apachekafka_img3.jpg" alt="Alternative text">
-    <figcaption>Image 3 — Representation of replication factor 2 on topics A, B and C within a Kafka cluster
-    </figcaption>
-</figure>
+![Representation of replication factor 2 on topics A, B and C within a Kafka cluster](apachekafka_img3.webp "Image 3 — Representation of replication factor 2 on topics A, B and C within a Kafka cluster")
 
 > NOTE: Only one broker can be the leader of a given partition.
 >
@@ -135,11 +127,7 @@ But what would happen if Broker 100 died?
 
 Topic A (Partition 0) would have its leader moved to Broker 101, and a replica would be created on Broker 102. Topic B (Partition 0), which had a replica on Broker 100, will have a new replica created on Broker 102. Image 4 shows this shift.
 
-<figure>
-    <img src="/img/apachekafka/apachekafka_img4.jpg" alt="Alternative text">
-    <figcaption>Image 4 — How the replication factor works when a broker dies
-    </figcaption>
-</figure>
+![How the replication factor works when a broker dies](apachekafka_img4.webp "Image 4 — How the replication factor works when a broker dies")
 
 If Broker 100 comes back online, Topic A (partition 0) may become Leader again.
 
@@ -151,11 +139,7 @@ A Producer's responsibility is to __write or publish messages__ (data) to Kafka 
 
 You always need to tell the Producer which topic it will write messages to. When you do that, Kafka automatically decides which partition the message will be sent to (Image 5).
 
-<figure>
-    <img src="/img/apachekafka/apachekafka_img5.jpg" alt="Alternative text">
-    <figcaption>Image 5 — Kafka Producer sending messages to the topic's three partitions
-    </figcaption>
-</figure>
+![Kafka Producer sending messages to the topic's three partitions](apachekafka_img5.webp "Image 5 — Kafka Producer sending messages to the topic's three partitions")
 
 When a message is sent by the Producer, __it is not possible to know which partition will hold the message__. However, there are two basic cases that determine the path of a given message.
 
@@ -218,11 +202,7 @@ The rule is as follows (use image 6 as a reference):
 
 > The strategy of creating more consumers than partitions is valid, even with the side effect of some consumers staying idle, because a broker might go down/die. That way the idle consumers take the place of the ones that went down and the consumption rate does not drop.
 
-<figure>
-    <img src="/img/apachekafka/apachekafka_img6.jpg" alt="Alternative text">
-    <figcaption>Image 6 — Representation of consuming an arbitrary topic through two different Consumer Groups
-    </figcaption>
-</figure>
+![Representation of consuming an arbitrary topic through two different Consumer Groups](apachekafka_img6.webp "Image 6 — Representation of consuming an arbitrary topic through two different Consumer Groups")
 
 According to image 6, we have two Consumer Groups. Imagine that Consumer Group 1 is a Java application, and Consumer Group 2 is another application written in Python for data analysis work.
 
@@ -238,11 +218,7 @@ Imagine a scenario where a given Kafka topic has three partitions and two consum
 
 Image 7 shows what the Consumer/Partition distribution for this topic might look like.
 
-<figure>
-    <img src="/img/apachekafka/apachekafka_img7.jpg" alt="Alternative text">
-    <figcaption>Image 7 — Distribution before rebalancing
-    </figcaption>
-</figure>
+![Distribution before rebalancing](apachekafka_img7.webp "Image 7 — Distribution before rebalancing")
 
 *Consumer 1* is assigned to Partition 0, while Consumer 2 is assigned to Partitions 1 and 2.
 
@@ -254,10 +230,7 @@ In both cases above, Kafka will trigger the topic __rebalancing__ system.
 
 Image 8 simulates, in a very simple way, rebalancing when the Consumer Group gets one more Consumer. In this context, each consumer is now assigned to a single partition.
 
-<figure>
-    <img src="/img/apachekafka/apachekafka_img8.jpg" alt="Alternative text">
-    <figcaption>Image 8 — Distribution after rebalancing</figcaption>
-</figure>
+![Distribution after rebalancing](apachekafka_img8.webp "Image 8 — Distribution after rebalancing")
 
 Notice that before, Consumer 2 was assigned to Partitions 1 and 2, but after rebalancing, Consumer 3 became assigned to Partition 2.
 
@@ -275,10 +248,7 @@ Consumer offsets are a way of tracking the offset of the last message consumed b
 
 Image 9 shows the Consumer Offsets mechanism. As messages are read by Consumer 1, the Kafka Broker periodically sends a message to a special topic called __consumer_offsets with the last offset read from the partition.
 
-<figure>
-    <img src="/img/apachekafka/apachekafka_img9.jpg" alt="Alternative text">
-    <figcaption>Image 9 — Representation of the Consumer Offset mechanism</figcaption>
-</figure>
+![Representation of the Consumer Offset mechanism](apachekafka_img9.webp "Image 9 — Representation of the Consumer Offset mechanism")
 
 That way, even if rebalancing happens, the new consumers assigned to the topics will know exactly which offset to start consuming messages from.
 
@@ -323,10 +293,7 @@ In the context of Kafka, the Zookeeper software is responsible for storing metad
 Image 10 represents all the concepts in this article: brokers, clusters, partitions, producers, consumers and Zookeeper. Together, these concepts make up Kafka's overall architecture.
 
 
-<figure>
-    <img src="/img/apachekafka/apachekafka_img10.jpg" alt="Alternative text">
-    <figcaption>Image 10 — Kafka overall architecture</figcaption>
-</figure>
+![Kafka overall architecture](apachekafka_img10.webp "Image 10 — Kafka overall architecture")
 
 ## References
 

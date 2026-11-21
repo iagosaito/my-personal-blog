@@ -20,10 +20,7 @@ Want to relive these moments with me?
 
 ### Wedding day
 
-<figure>
-    <img src="/img/primeiro_ano/img_1.jpg" alt="Our wedding">
-    <figcaption style="text-align: center;">You and me singing</figcaption>
-</figure>
+![Our wedding](img_1.jpg "You and me singing")
 
 It was the song, remember?
 
@@ -63,19 +60,13 @@ I'm so grateful that you keep persevering, and that you help me put Jehovah in o
 
 Do you see why I'm so sure we're going to make it? **Because love **NEVER** fails, of course!**
 
-<figure>
-    <img src="/img/primeiro_ano/img_2.jpg" alt="Civil ceremony">
-    <figcaption style="text-align: center;">Civil ceremony</figcaption>
-</figure>
+![Civil ceremony](img_2.jpg "Civil ceremony")
 
 This photo turned out so good!!
 
 ### Our first in-person convention together
 
-<figure>
-    <img src="/img/primeiro_ano/img_3.jpg" alt="In-person convention">
-    <figcaption style="text-align: center;">In-person convention</figcaption>
-</figure>
+![In-person convention](img_3.jpg "In-person convention")
 
 How could I forget the hotel room episode? I hope we can laugh about that story forever.
 
@@ -83,10 +74,7 @@ Writing about that day, right at this moment, something came to mind: the times 
 
 ### Beach trip in the winter
 
-<figure>
-    <img src="/img/primeiro_ano/img_4.jpg" alt="Villa Del Fiori">
-    <figcaption style="text-align: center;">Villa Del Fiori</figcaption>
-</figure>
+![Villa Del Fiori](img_4.jpg "Villa Del Fiori")
 
 It was so good, wasn't it? I think we know something was special when we look at a photo and miss it.
 
@@ -100,23 +88,14 @@ Sometimes I make things complicated, but I want you to know that my end goal is 
 
 ### Double trip: Santos and the beach
 
-<figure>
-    <img src="/img/primeiro_ano/img_5.jpg" alt="Santos">
-    <figcaption style="text-align: center;">Santos</figcaption>
-</figure>
+![Santos](img_5.jpg "Santos")
 
-<figure>
-    <img src="/img/primeiro_ano/img_6.jpg" alt="Guarda-Mor">
-    <figcaption style="text-align: center;">Guarda-Mor</figcaption>
-</figure>
+![Guarda-Mor](img_6.jpg "Guarda-Mor")
 
 
 ### Outback day
 
-<figure>
-    <img src="/img/primeiro_ano/img_7.jpg" alt="Outback Day">
-    <figcaption style="text-align: center;">Outback Day</figcaption>
-</figure>
+![Outback Day](img_7.jpg "Outback Day")
 
 One of many, right? I think it couldn't be left out. Maybe you don't know this, but that's where we had our best conversations. I remember times when we talked for hours.
 
@@ -124,10 +103,7 @@ I never imagined that in my life I could talk to someone nonstop for more than 4
 
 ### Honeymoon and conclusion
 
-<figure>
-    <img src="/img/primeiro_ano/img_8.jpg" alt="Honeymoon">
-    <figcaption style="text-align: center;">Honeymoon</figcaption>
-</figure>
+![Honeymoon](img_8.jpg "Honeymoon")
 
 > "But of all these friends and lovers
 >

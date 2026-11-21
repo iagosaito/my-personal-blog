@@ -1,0 +1,21 @@
+/* Post images rendered by layouts/_markup/render-image.html */
+.md-content .post-figure {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.md-content .post-figure img {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+}
+
+.md-content .post-figure > figcaption {
+    margin: 0.6rem auto 0;
+    max-width: 90%;
+    color: var(--secondary);
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.5;
+}

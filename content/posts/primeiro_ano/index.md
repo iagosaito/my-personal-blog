@@ -20,10 +20,7 @@ Quer relembrar comigo esses momentos?
 
 ### Dia do casamento
 
-<figure>
-    <img src="/img/primeiro_ano/img_1.jpg" alt="Nosso casamento">
-    <figcaption style="text-align: center;">Eu e você cantando</figcaption>
-</figure>
+![Nosso casamento](img_1.jpg "Eu e você cantando")
 
 Era o cântico, lembra? 
 
@@ -63,19 +60,13 @@ Sou muito grato por você continuar persistindo, e por me ajudar a colocar Jeov�
 
 Entende porque eu tenho tamanha certeza de que vamos dar certo? **Porque o amor **NUNCA** acaba, ora!** 
 
-<figure>
-    <img src="/img/primeiro_ano/img_2.jpg" alt="Civíl">
-    <figcaption style="text-align: center;">Civíl</figcaption>
-</figure>
+![Civíl](img_2.jpg "Civíl")
 
 Essa foto ficou muito boa!!
 
 ### Nosso primeiro congresso presencial juntos
 
-<figure>
-    <img src="/img/primeiro_ano/img_3.jpg" alt="Congresso presencial">
-    <figcaption style="text-align: center;">Congresso presencial</figcaption>
-</figure>
+![Congresso presencial](img_3.jpg "Congresso presencial")
 
 Como não lembrar do episódio do quarto de hotel? Espero que possamos nos divertir com essa história para sempre. 
 
@@ -83,10 +74,7 @@ Escrevendo sobre esse dia, nesse exato momento, veio algo na minha mente: as oca
 
 ### Viagem a praia no inverno
 
-<figure>
-    <img src="/img/primeiro_ano/img_4.jpg" alt="Villa Del Fiori">
-    <figcaption style="text-align: center;">Villa Del Fiori</figcaption>
-</figure>
+![Villa Del Fiori](img_4.jpg "Villa Del Fiori")
 
 Foi tão bom, concorda? Acho que a gente sabe quando uma coisa foi especial quando nós olhamos uma foto e sentimos saudade. 
 
@@ -100,23 +88,14 @@ As vezes eu faço coisas complicadas, mas quero que você saiba que o meu objeti
 
 ### Dupla viagem: Santos e Praia
 
-<figure>
-    <img src="/img/primeiro_ano/img_5.jpg" alt="Santos">
-    <figcaption style="text-align: center;">Santos</figcaption>
-</figure>
+![Santos](img_5.jpg "Santos")
 
-<figure>
-    <img src="/img/primeiro_ano/img_6.jpg" alt="Guarda-Mor">
-    <figcaption style="text-align: center;">Guarda-Mor</figcaption>
-</figure>
+![Guarda-Mor](img_6.jpg "Guarda-Mor")
 
 
 ### Outback day
 
-<figure>
-    <img src="/img/primeiro_ano/img_7.jpg" alt="Outback Day">
-    <figcaption style="text-align: center;">Outback Day</figcaption>
-</figure>
+![Outback Day](img_7.jpg "Outback Day")
 
 Um dos, né? Acho que não poderia faltar. Talvez você não saiba disso, mas é lá que nós tivemos as nossas melhores conversas. Lembro de vezes em que ficamos conversando por horas. 
 
@@ -124,10 +103,7 @@ Eu nunca imaginei que na minha vida eu poderia conversar de forma contínua com 
 
 ### Lua de mel e conclusão
 
-<figure>
-    <img src="/img/primeiro_ano/img_8.jpg" alt="Lua de mel">
-    <figcaption style="text-align: center;">Lua de mel</figcaption>
-</figure>
+![Lua de mel](img_8.jpg "Lua de mel")
 
 > "But of all these friends and lovers
 > 

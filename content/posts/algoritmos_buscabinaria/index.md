@@ -45,17 +45,11 @@ A diferença entre as tentativas do participante para o algoritmo de busca biná
 
 Imagine uma lista de 10 elementos ordenados de maneira crescente. O objetivo é encontrar em qual posição está o número 13 — sendo assim, o número 13 é o alvo.
 
-<figure>
-    <img src="/img/algoritmos/buscabinaria/buscabinaria_img1.jpg" alt="Texto alternativo">
-    <figcaption>Imagem 1 — Lista de números em ordem crescente</figcaption>
-</figure>
+![Lista de números em ordem crescente](buscabinaria_img1.webp "Imagem 1 — Lista de números em ordem crescente")
 
 A busca binária, primeiro, irá verificar se o elemento do meio da lista é igual ao alvo. Como podemos observar na imagem abaixo, o número 10 (tentativa) é menor que o 13 (alvo).
 
-<figure>
-    <img src="/img/algoritmos/buscabinaria/buscabinaria_img2.jpg" alt="Texto alternativo">
-    <figcaption>Imagem 2 — Verifica se a tentativa é igual ao alvo</figcaption>
-</figure>
+![Verifica se a tentativa é igual ao alvo](buscabinaria_img2.webp "Imagem 2 — Verifica se a tentativa é igual ao alvo")
 
 O algoritmo, portanto, irá eliminar todos os números antes do meio. A partir disso, podemos identificar duas características importantes da busca binária:
 
@@ -64,19 +58,13 @@ O algoritmo, portanto, irá eliminar todos os números antes do meio. A partir d
 
 Depois de eliminar os elementos, chegou a hora de fazer uma nova tentativa. O processo se repete. O algoritmo irá verificar qual é o elemento do meio em relação aos elementos que sobraram, conforme mostra a figura abaixo.
 
-<figure>
-    <img src="/img/algoritmos/buscabinaria/buscabinaria_img3.jpg" alt="Texto alternativo">
-    <figcaption>Imagem 3 — Elementos ignorados e nova tentativa</figcaption>
-</figure>
+![Elementos ignorados e nova tentativa](buscabinaria_img3.webp "Imagem 3 — Elementos ignorados e nova tentativa")
 
 O elemento 19 (tentativa) é igual a 13 (alvo)? Não. Sendo assim, eliminaremos todos os elementos a direita do meio, porque 19 é maior do que 13.
 
 Depois disso, o processo novamente é realizado. Como só restaram dois elementos, o primeiro é considerado como meio.
 
-<figure>
-    <img src="/img/algoritmos/buscabinaria/buscabinaria_img4.jpg" alt="Texto alternativo">
-    <figcaption>Imagem 4 — Elementos ignorados a direita do meio e uma nova tentativa sendo feita</figcaption>
-</figure>
+![Elementos ignorados a direita do meio e uma nova tentativa sendo feita](buscabinaria_img4.webp "Imagem 4 — Elementos ignorados a direita do meio e uma nova tentativa sendo feita")
 
 Opa! A nossa tentativa (13) é igual ao alvo (13)! Parabéns, o algoritmo foi executado com sucesso.
 

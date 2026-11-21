@@ -80,10 +80,7 @@ La respuesta: **Depende**. He aquí por qué.
 
 El autor propone un ejercicio relacionado con una aplicación de subastas con 4 componentes: Bid Producer, Bid Capture, Bid Tracking, Bid Analytics.
 
-<figure>
-    <img src="/img/fundamentals_of_software_arch/chap2/img1.jpg" alt="Representación de los componentes del sistema de subastas">
-    <figcaption style="text-align: center;">Imagen 1 - Sistema de subastas</figcaption>
-</figure>
+![Representación de los componentes del sistema de subastas](img1.jpg "Imagen 1 - Sistema de subastas")
 
 Como vemos en la figura 1, el Bid Producer produce un Bid (puja) que se transmite a tres servicios: Capture, Tracking y Analytics.
 
@@ -91,10 +88,7 @@ Esto puede hacerse de dos formas, usando colas o tópicos, como muestran las sig
 
 ### Tópicos
 
-<figure>
-    <img src="/img/fundamentals_of_software_arch/chap2/img2.jpg" alt="Comunicación entre servicios usando un tópico">
-    <figcaption style="text-align: center;">Imagen 2 - Comunicación entre servicios usando un tópico (pub-sub)</figcaption>
-</figure>
+![Comunicación entre servicios usando un tópico](img2.jpg "Imagen 2 - Comunicación entre servicios usando un tópico (pub-sub)")
 
 #### Ventajas
 
@@ -108,10 +102,7 @@ Otro punto, y particularmente el más interesante, es que un sistema de tópicos
 
 ### Colas
 
-<figure>
-    <img src="/img/fundamentals_of_software_arch/chap2/img3.jpg" alt="Comunicación entre servicios usando colas">
-    <figcaption style="text-align: center;">Imagen 3 - Comunicación entre servicios usando colas</figcaption>
-</figure>
+![Comunicación entre servicios usando colas](img3.jpg "Imagen 3 - Comunicación entre servicios usando colas")
 
 
 #### Ventajas

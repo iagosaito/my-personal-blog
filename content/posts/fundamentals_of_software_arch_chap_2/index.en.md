@@ -80,10 +80,7 @@ The answer: **It depends**. Here's why.
 
 The author proposes an exercise based on an auction application with 4 components: Bid Producer, Bid Capture, Bid Tracking, Bid Analytics.
 
-<figure>
-    <img src="/img/fundamentals_of_software_arch/chap2/img1.jpg" alt="Representation of the auction system components">
-    <figcaption style="text-align: center;">Image 1 - Auction system</figcaption>
-</figure>
+![Representation of the auction system components](img1.jpg "Image 1 - Auction system")
 
 As we can see in figure 1, the Bid Producer produces a Bid that is sent to three services: Capture, Tracking and Analytics.
 
@@ -91,10 +88,7 @@ This can be done in two ways, using queues or topics, as shown in the following 
 
 ### Topics
 
-<figure>
-    <img src="/img/fundamentals_of_software_arch/chap2/img2.jpg" alt="Communication between services using a topic">
-    <figcaption style="text-align: center;">Image 2 - Communication between services using a topic (pub-sub)</figcaption>
-</figure>
+![Communication between services using a topic](img2.jpg "Image 2 - Communication between services using a topic (pub-sub)")
 
 #### Advantages
 
@@ -108,10 +102,7 @@ Another point, and the most interesting one in my opinion, is that a topic-based
 
 ### Queues
 
-<figure>
-    <img src="/img/fundamentals_of_software_arch/chap2/img3.jpg" alt="Communication between services using queues">
-    <figcaption style="text-align: center;">Image 3 - Communication between services using queues</figcaption>
-</figure>
+![Communication between services using queues](img3.jpg "Image 3 - Communication between services using queues")
 
 
 #### Advantages

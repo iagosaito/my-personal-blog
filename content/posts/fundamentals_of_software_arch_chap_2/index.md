@@ -80,10 +80,7 @@ A resposta: **Depende**. Eis o porquê.
 
 O autor propõe um exercício relacionado a uma aplicação de leilão com 4 componentes: Bid Producer, Bid Capture, Bid Tracking, Bid Analytics. 
 
-<figure>
-    <img src="/img/fundamentals_of_software_arch/chap2/img1.jpg" alt="Representação dos componentes do sistema de leilão">
-    <figcaption style="text-align: center;">Imagem 1 - Sistema de leilão</figcaption>
-</figure>
+![Representação dos componentes do sistema de leilão](img1.jpg "Imagem 1 - Sistema de leilão")
 
 Conforme vemos na figura 1, o Bid Producer produz um Bid (lance) que é transmitido para três serviços: Capture, Tracking e Analytics. 
 
@@ -91,10 +88,7 @@ Isso pode ser feito de duas formas, utilizando filas ou tópicos, conforme as im
 
 ### Tópicos
 
-<figure>
-    <img src="/img/fundamentals_of_software_arch/chap2/img2.jpg" alt="Comunicação entre serviços utilizando tópico">
-    <figcaption style="text-align: center;">Imagem 2 - Comunicação entre serviços utilizando tópico (pub-sub)</figcaption>
-</figure>
+![Comunicação entre serviços utilizando tópico](img2.jpg "Imagem 2 - Comunicação entre serviços utilizando tópico (pub-sub)")
 
 #### Vantagens
 
@@ -108,10 +102,7 @@ Outro ponto, e particularmente o mais interessante, é que um sistema de tópico
 
 ### Filas
 
-<figure>
-    <img src="/img/fundamentals_of_software_arch/chap2/img3.jpg" alt="Comunicação entre serviços utilizando filas">
-    <figcaption style="text-align: center;">Imagem 3 - Comunicação entre serviços utilizando filas</figcaption>
-</figure>
+![Comunicação entre serviços utilizando filas](img3.jpg "Imagem 3 - Comunicação entre serviços utilizando filas")
 
 
 #### Vantagens

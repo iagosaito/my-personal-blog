@@ -1,0 +1,66 @@
+{{- /*
+  Image render hook for markdown images: ![alt](file.jpg "caption")
+
+  - Looks the image up in the post's bundle (content/posts/<post>/), then in
+    assets/. Raster images become responsive WebP (srcset) with width/height,
+    so the browser picks the right size and the layout doesn't jump.
+  - A standalone image with a title becomes <figure> + <figcaption>.
+  - Anything else (remote URL, SVG, GIF, missing file) is rendered as-is.
+*/ -}}
+{{- $u := urls.Parse .Destination -}}
+{{- $src := $u.String -}}
+{{- $img := "" -}}
+{{- if not $u.IsAbs -}}
+  {{- $path := strings.TrimPrefix "./" $u.Path -}}
+  {{- with or (.PageInner.Resources.Get $path) (resources.Get $path) -}}
+    {{- $img = . -}}
+  {{- else -}}
+    {{- warnf "%s: image %q not found" .Page.File.Path .Destination -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $attrs := dict "alt" .Text "loading" "lazy" "decoding" "async" -}}
+{{- $isRaster := and $img (eq $img.ResourceType "image") (in (slice "jpeg" "png" "webp") $img.MediaType.SubType) -}}
+{{- if $isRaster -}}
+  {{- $srcset := slice -}}
+  {{- $fallback := "" -}}
+  {{- range slice 480 720 1080 1440 -}}
+    {{- if lt . $img.Width -}}
+      {{- $r := $img.Resize (printf "%dx webp q82" .) -}}
+      {{- $srcset = $srcset | append (printf "%s %dw" $r.RelPermalink $r.Width) -}}
+      {{- if eq . 720 }}{{ $fallback = $r }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- /* Already WebP: serve the original at full size instead of re-encoding it */ -}}
+  {{- $full := cond (eq $img.MediaType.SubType "webp") $img ($img.Resize (printf "%dx webp q82" $img.Width)) -}}
+  {{- $srcset = $srcset | append (printf "%s %dw" $full.RelPermalink $full.Width) -}}
+  {{- $fallback = $fallback | default $full -}}
+  {{- $attrs = merge $attrs (dict
+      "src" $fallback.RelPermalink
+      "srcset" (delimit $srcset ", ")
+      "sizes" "(max-width: 768px) 100vw, 720px"
+      "width" $img.Width
+      "height" $img.Height) -}}
+{{- else -}}
+  {{- /* Served as-is; only now publish the original file */ -}}
+  {{- with $img }}{{ $src = .RelPermalink }}{{ end -}}
+  {{- $attrs = merge $attrs (dict "src" $src) -}}
+{{- end -}}
+{{- with and (not .IsBlock) .Title }}{{ $attrs = merge $attrs (dict "title" .) }}{{ end -}}
+{{- $attrs = merge $attrs .Attributes -}}
+
+{{- $tag := "<img" -}}
+{{- range $k, $v := $attrs -}}
+  {{- if $v -}}{{- $tag = printf "%s %s=\"%s\"" $tag $k (string $v | transform.HTMLEscape) -}}{{- end -}}
+{{- end -}}
+{{- $tag = printf "%s>" $tag -}}
+
+{{- if and .IsBlock .Title -}}
+<figure class="post-figure">
+  {{ $tag | safeHTML }}
+  <figcaption>{{ .Title | transform.HTMLEscape | safeHTML }}</figcaption>
+</figure>
+{{- else -}}
+  {{- $tag | safeHTML -}}
+{{- end -}}
+{{- /**/ -}}

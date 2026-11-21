@@ -45,17 +45,11 @@ The difference between the contestant's guesses and the binary search algorithm 
 
 Imagine a list of 10 elements sorted in ascending order. The goal is to find the position of the number 13 — so the number 13 is the target.
 
-<figure>
-    <img src="/img/algoritmos/buscabinaria/buscabinaria_img1.jpg" alt="Alternative text">
-    <figcaption>Image 1 — List of numbers in ascending order</figcaption>
-</figure>
+![List of numbers in ascending order](buscabinaria_img1.webp "Image 1 — List of numbers in ascending order")
 
 Binary search will first check whether the middle element of the list is equal to the target. As we can see in the image below, the number 10 (guess) is smaller than 13 (target).
 
-<figure>
-    <img src="/img/algoritmos/buscabinaria/buscabinaria_img2.jpg" alt="Alternative text">
-    <figcaption>Image 2 — Checks whether the guess is equal to the target</figcaption>
-</figure>
+![Checks whether the guess is equal to the target](buscabinaria_img2.webp "Image 2 — Checks whether the guess is equal to the target")
 
 The algorithm will therefore eliminate all the numbers before the middle. From this, we can identify two important characteristics of binary search:
 
@@ -64,19 +58,13 @@ The algorithm will therefore eliminate all the numbers before the middle. From t
 
 After eliminating the elements, it's time to make a new guess. The process repeats. The algorithm will check which element is in the middle of the remaining elements, as shown in the figure below.
 
-<figure>
-    <img src="/img/algoritmos/buscabinaria/buscabinaria_img3.jpg" alt="Alternative text">
-    <figcaption>Image 3 — Ignored elements and a new guess</figcaption>
-</figure>
+![Ignored elements and a new guess](buscabinaria_img3.webp "Image 3 — Ignored elements and a new guess")
 
 Is element 19 (guess) equal to 13 (target)? No. So we'll eliminate all the elements to the right of the middle, because 19 is greater than 13.
 
 After that, the process is carried out again. Since only two elements are left, the first one is considered the middle.
 
-<figure>
-    <img src="/img/algoritmos/buscabinaria/buscabinaria_img4.jpg" alt="Alternative text">
-    <figcaption>Image 4 — Ignored elements to the right of the middle and a new guess being made</figcaption>
-</figure>
+![Ignored elements to the right of the middle and a new guess being made](buscabinaria_img4.webp "Image 4 — Ignored elements to the right of the middle and a new guess being made")
 
 Yes! Our guess (13) is equal to the target (13)! Congratulations, the algorithm ran successfully.
 

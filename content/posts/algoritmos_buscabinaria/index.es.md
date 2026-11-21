@@ -45,17 +45,11 @@ La diferencia entre los intentos del participante y el algoritmo de búsqueda bi
 
 Imagina una lista de 10 elementos ordenados de forma ascendente. El objetivo es encontrar en qué posición está el número 13 — por lo tanto, el número 13 es el objetivo.
 
-<figure>
-    <img src="/img/algoritmos/buscabinaria/buscabinaria_img1.jpg" alt="Texto alternativo">
-    <figcaption>Imagen 1 — Lista de números en orden ascendente</figcaption>
-</figure>
+![Lista de números en orden ascendente](buscabinaria_img1.webp "Imagen 1 — Lista de números en orden ascendente")
 
 La búsqueda binaria, primero, verificará si el elemento del medio de la lista es igual al objetivo. Como podemos observar en la imagen de abajo, el número 10 (intento) es menor que el 13 (objetivo).
 
-<figure>
-    <img src="/img/algoritmos/buscabinaria/buscabinaria_img2.jpg" alt="Texto alternativo">
-    <figcaption>Imagen 2 — Verifica si el intento es igual al objetivo</figcaption>
-</figure>
+![Verifica si el intento es igual al objetivo](buscabinaria_img2.webp "Imagen 2 — Verifica si el intento es igual al objetivo")
 
 El algoritmo, por lo tanto, eliminará todos los números anteriores al medio. A partir de esto, podemos identificar dos características importantes de la búsqueda binaria:
 
@@ -64,19 +58,13 @@ El algoritmo, por lo tanto, eliminará todos los números anteriores al medio. A
 
 Después de eliminar los elementos, llega el momento de hacer un nuevo intento. El proceso se repite. El algoritmo verificará cuál es el elemento del medio entre los elementos que quedaron, como muestra la figura de abajo.
 
-<figure>
-    <img src="/img/algoritmos/buscabinaria/buscabinaria_img3.jpg" alt="Texto alternativo">
-    <figcaption>Imagen 3 — Elementos ignorados y nuevo intento</figcaption>
-</figure>
+![Elementos ignorados y nuevo intento](buscabinaria_img3.webp "Imagen 3 — Elementos ignorados y nuevo intento")
 
 ¿El elemento 19 (intento) es igual a 13 (objetivo)? No. Por lo tanto, eliminaremos todos los elementos a la derecha del medio, porque 19 es mayor que 13.
 
 Después de eso, el proceso se realiza nuevamente. Como solo quedaron dos elementos, el primero se considera el medio.
 
-<figure>
-    <img src="/img/algoritmos/buscabinaria/buscabinaria_img4.jpg" alt="Texto alternativo">
-    <figcaption>Imagen 4 — Elementos ignorados a la derecha del medio y un nuevo intento</figcaption>
-</figure>
+![Elementos ignorados a la derecha del medio y un nuevo intento](buscabinaria_img4.webp "Imagen 4 — Elementos ignorados a la derecha del medio y un nuevo intento")
 
 ¡Eso! ¡Nuestro intento (13) es igual al objetivo (13)! Felicidades, el algoritmo se ejecutó con éxito.
 

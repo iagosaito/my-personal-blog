@@ -58,10 +58,7 @@ Como o LCOM funciona?
 
 O LCOM é uma equação que expõe os níveis de acoplamento entre as classes. Considere o seguinte exemplo:
 
-<figure>
-    <img src="/img/fundamentals_of_software_arch/chap3/img1.jpg" alt="LCOM - .">
-    <figcaption style="text-align: center;">Imagem 1 - Modelo LCOM representado em forma de grafo.</figcaption>
-</figure>
+![LCOM - .](img1.gif "Imagem 1 - Modelo LCOM representado em forma de grafo.")
 
 Nas duas figuras temos 5 métodos representados pelas letras A até E, e duas variáveis x e y. As setas indicam quais variáveis são utilizadas pelos métodos. 
 
